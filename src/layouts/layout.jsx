@@ -1,4 +1,5 @@
 import React, { useLayoutEffect } from 'react';
+import { Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faFileAlt, faHome } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -26,15 +27,15 @@ const RootLayout = ({ children }) => {
             <span style={labelStyle}>Home</span>
           </div>
           <div style={iconGroupStyle}>
-            <a href="https://github.com/johnkorreckk" style={iconStyle}>
+            <Button onClick={() => window.open("https://github.com/johnkorreckk", "_blank")} style={iconStyle}>
               <FontAwesomeIcon icon={faGithub} />
-            </a>
+            </Button>
             <span style={labelStyle}>GitHub</span>
           </div>
           <div style={iconGroupStyle}>
-            <a href="https://linkedin.com/in/johnkorreck" style={iconStyle}>
+          <Button onClick={() => window.open("https://linkedin.com/in/johnkorreck", "_blank")} style={iconStyle}>
               <FontAwesomeIcon icon={faLinkedin} />
-            </a>
+            </Button>
             <span style={labelStyle}>LinkedIn</span>
           </div>
           <div style={iconGroupStyle}>
@@ -83,6 +84,10 @@ const iconStyle = {
   fontSize: '40px',
   marginRight: '50px', // Adjusted margin for smaller gap
   marginLeft: '50px', // Adjusted margin for smaller gap
+  cursor: 'pointer',
+  backgroundColor: 'transparent',
+  border: 'none',
+  outline: 'none'
 };
 
 const iconGroupStyle = {

@@ -7,7 +7,10 @@ const Projects = () => {
       <div style={videoGridStyle}>
         <div style={videoWrapperStyle}>
           <h2 style={videoHeaderStyle}>S&P 500 SENTIMENT ANALYSIS</h2>
-          <p style={videoDescriptionStyle}>Hello</p>
+          <p style={videoDescriptionStyle}>
+          Created a python web scraper using BeautifulSoup and Transformers libraries 
+          that read the most recent news articles about stocks listed on the S&P 500
+          </p>
           <iframe
             width="90%"
             height="315"
@@ -60,6 +63,7 @@ const videoDescriptionStyle = {
   width: '600px', // Set a width to control line length
   whiteSpace: 'normal', // Allow wrapping
   overflowWrap: 'break-word', // Ensure long words break if necessary
+  fontStyle: 'italic'
 };
 
 const videoGridStyle = {
