@@ -3,21 +3,23 @@ import React from 'react';
 const Home = () => {
   return (
     <div style={mainContainerStyle}>
-      <main style={mainFontStyle}>
-        HI! I'M JOHN KORRECK, A COMPUTER SCIENCE STUDENT AT THE MSU COLLEGE OF ENGINEERING.
-        I AM DEEPLY PASSIONATE ABOUT:
-        <ul style={{ paddingLeft: '20px' }}>
-          <li><span style={{ fontStyle: 'italic' }}>ALGORITHM DESIGN</span></li>
-          <li><span style={{ fontStyle: 'italic' }}>QUANTITATIVE DEVELOPMENT</span></li>
-          <li><span style={{ fontStyle: 'italic' }}>ANYTHING SWE RELATED!</span></li>
-        </ul>
-        CHECK OUT SOME OF MY PROJECTS BELOW!
-      </main>
-      <div style={imageContainerStyle}>
-        <img src='/assets/images/profile.JPEG' alt='John Korreck' style={profileStyle} />
-        <img src='/assets/images/profile2.JPEG' alt='John Korreck' style={profileStyle} />
+      <div style={contentContainerStyle}>
+        <main style={mainFontStyle}>
+          HI! I'M JOHN KORRECK, A COMPUTER SCIENCE STUDENT AT THE MSU COLLEGE OF ENGINEERING.
+          I AM DEEPLY PASSIONATE ABOUT:
+          <ul style={{ paddingLeft: '20px' }}>
+            <li><span style={{ fontStyle: 'italic' }}>ALGORITHM DESIGN</span></li>
+            <li><span style={{ fontStyle: 'italic' }}>QUANTITATIVE DEVELOPMENT</span></li>
+            <li><span style={{ fontStyle: 'italic' }}>ANYTHING SWE RELATED!</span></li>
+          </ul>
+          CHECK OUT SOME OF MY PROJECTS ON <a href="https://github.com/johnkorreckk" target="_blank" rel="noopener noreferrer">GITHUB</a>!
+        </main>
+        <div style={imageContainerStyle}>
+          <img src='/assets/images/profile.JPEG' alt='John Korreck' style={profileStyle} />
+          <img src='/assets/images/profile2.JPEG' alt='John Korreck' style={profileStyle} />
+        </div>
       </div>
-      <div style={videoGridStyle}>
+      {/* <div style={videoGridStyle}>
         <div style={videoWrapperStyle}>
           <h2 style={videoHeaderStyle}>S&P 500 SENTIMENT ANALYSIS</h2>
           <p style={videoDescriptionStyle}>
@@ -43,7 +45,7 @@ const Home = () => {
             allowFullScreen
           ></iframe>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -60,18 +62,27 @@ const mainFontStyle = {
 
 const mainContainerStyle = {
   display: 'flex',
-  flexDirection: 'column', // Change to 'column' to stack elements
+  flexDirection: 'column', // Stack everything vertically
   alignItems: 'flex-start',
   justifyContent: 'flex-start',
-  gap: '20px', // Space between main content and images
   width: '100%',
   marginTop: '100px',
   marginLeft: '100px',
 };
 
+const contentContainerStyle = {
+  display: 'flex',
+  flexDirection: 'row', // Align text and images horizontally
+  alignItems: 'flex-start',
+  justifyContent: 'flex-start',
+  gap: '20px', // Space between text and images
+  width: '100%',
+};
+
 const imageContainerStyle = {
   display: 'flex',
   gap: '20px', // Space between images
+  marginTop: '30px'
 };
 
 const profileStyle = {
@@ -105,6 +116,7 @@ const videoGridStyle = {
   justifyContent: 'center',
   gap: '100px',
   flexWrap: 'wrap',
+  marginTop: '200px',
 };
 
 const videoWrapperStyle = {
